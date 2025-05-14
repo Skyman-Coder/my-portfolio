@@ -1,0 +1,150 @@
+@font-face {
+	font-family: bkoodak;
+	src: url(../fonts/BKoodakBold.ttf);
+}
+@font-face {
+	font-family: MartianMono;
+	src: url(../fonts/static/MartianMono-ExtraBold.ttf);
+}
+
+* {
+	font-family: bkoodak, MartianMono;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container h1 {
+	font-size: 25px;
+	color: rgba(54, 54, 54, 0.849);
+}
+container h1 span {
+	color: red;
+}
+.container {
+	position: absolute;
+	border: 1px solid white;
+	width: 90%;
+	background-color: rgba(255, 255, 255, 0.822);
+	top: -10%;
+	left: 50%;
+	transition: top 0.6s ease 0s;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 3px;
+	min-width: 300px;
+}
+header {
+	position: fixed;
+	font-size: 30px;
+	/* background-color: rgba(255, 255, 255, 0.89); */
+	width: 100%;
+}
+
+.h-btn {
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+    /* border: 1px solid black; */
+	user-select: none;
+	width: 100%;
+    min-width: 300px;
+	padding: 10px;
+}
+@media only screen and (max-width: 393px) {
+	.shiny-button {
+		font-size: 15px !important;
+	}
+}
+
+header a {
+    color: white;
+    margin: -8px 0px;
+	
+}
+
+.container h2 {
+	color: #2f76acfb;
+}
+.shiny-button {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the shine doesn't overflow */
+    display: inline-block;
+    padding: 10px 20px;
+	margin-top: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    /* border: 1px solid black; */
+    user-select: none;
+    text-decoration: none;
+    width: fit-content;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.github {
+	background-image: linear-gradient(90deg, #5939ce 0, #dd217fd7);
+}
+.telegram {
+	background-image: linear-gradient(90deg, #279bfa 0, #251ac4);
+}
+.whatsapp {
+	background-image: linear-gradient(90deg, #11a732 0, #0de660cc);
+}
+.rubika {
+	background-image: linear-gradient(90deg, #752cf3 0 30%,  rgb(36, 219, 36) 70%, #eb401ad5 100%);
+}
+.shiny-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(253, 253, 253, 0.377), transparent);
+}
+.shiny-button:hover::before {
+	animation: shine 1s;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.shiny-button:hover {
+    transform: scale(1.05);
+}
+
+#github-icon, #telegram-icon, #whatsapp-icon, #rubika-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.text-blue {
+	color: rgb(59 130 246);
+}
+.text-lime {
+	color: rgb(70, 147, 12);
+}
+.text-yellow {
+	color: rgb(255, 255, 3);
+}
+.text-red {
+	color: rgb(249, 31, 31)
+}
+.text-purple {
+	color: purple;
+}
+.text-indigo {
+	color: rgb(255, 237, 42);
+}
+
