@@ -15,11 +15,14 @@
 }
 
 .container h1 {
-	font-size: 25px;
+	font-size: 20px;
 	color: rgba(54, 54, 54, 0.849);
 }
 container h1 span {
 	color: red;
+}
+.container h2 {
+	color: #2f76acfb;
 }
 .container {
 	position: absolute;
@@ -29,11 +32,13 @@ container h1 span {
 	top: -10%;
 	left: 50%;
 	transition: top 0.6s ease 0s;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -40%);
 	padding: 20px;
 	font-size: 20px;
 	border-radius: 3px;
 	min-width: 300px;
+	max-height: 50vh;
+	overflow-y: auto;
 }
 header {
 	position: fixed;
@@ -50,12 +55,15 @@ header {
     /* border: 1px solid black; */
 	user-select: none;
 	width: 100%;
-    min-width: 300px;
+	min-width: 300px;
 	padding: 10px;
 }
 @media only screen and (max-width: 393px) {
 	.shiny-button {
 		font-size: 15px !important;
+	}
+	.container h1, .container h2, .container {
+		font-size: 16px !important;
 	}
 }
 
@@ -65,9 +73,6 @@ header a {
 	
 }
 
-.container h2 {
-	color: #2f76acfb;
-}
 .shiny-button {
     position: relative;
     color: white;
