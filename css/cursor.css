@@ -1,0 +1,94 @@
+.mouse-follow {
+	  position: absolute;
+}
+.mouse-cursor,
+.mouse-cursor2 {
+	  position: fixed;
+}
+@media screen and (min-width: 1024px) {
+	html:not(.elementor-html)  * {
+	cursor: none;
+}
+
+.mouse-follow {
+  width: 17px;
+  height: 17px;
+  background: transparent url("../assets/star.jpg") no-repeat center center;
+  background-size:cover;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: transform 0.2s ease-out, opacity 1s ease-out;
+	z-index: 99999999999999999999;
+}
+
+.mouse-cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  transition: all 200ms ease-out;
+	z-index: 999999999999999999999;
+  pointer-events: none;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+
+.mouse-cursor2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url(../assets/pointer.png) no-repeat center center;
+  background-size: cover;
+	z-index: 999999999999999999999;
+  transform: translate(-0%, -50%);
+  margin-top: 12px;
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+}
+}
+
+/***** Phoenix  *****/
+#phoenix {
+	pointer-events: none;
+	user-select: none;
+}
+
+#phoenix-body {
+  animation: phoenixBodyMovement 2.3s infinite;
+}
+
+#r-wing {
+  animation: phoenixRflap 2.3s infinite;
+}
+
+#l-wing {
+  animation: phoenixLflap 2.3s infinite;
+}
+
+@keyframes phoenixRflap {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes phoenixLflap {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes phoenixBodyMovement {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}

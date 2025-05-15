@@ -5,6 +5,7 @@
 @font-face {
 	font-family: MartianMono;
 	src: url(../fonts/static/MartianMono-ExtraBold.ttf);
+	
 }
 
 * {
@@ -18,21 +19,22 @@
 	font-size: 20px;
 	color: rgba(54, 54, 54, 0.849);
 }
-container h1 span {
-	color: red;
-}
 .container h2 {
-	color: #2f76acfb;
+	border-top: 1px solid black;
+	padding: 20px;
 }
 .container {
+	z-index: 0;
 	position: absolute;
 	border: 1px solid white;
 	width: 90%;
 	background-color: rgba(255, 255, 255, 0.822);
-	top: -10%;
+	top: 50%;
 	left: 50%;
-	transition: top 0.6s ease 0s;
-	transform: translate(-50%, -40%);
+	opacity: 0;
+	transition: all 0.6s ease 0s;
+	transform: translate(-50%, -40%) scale(0.3);
+	
 	padding: 20px;
 	font-size: 20px;
 	border-radius: 3px;
@@ -45,6 +47,7 @@ header {
 	font-size: 30px;
 	/* background-color: rgba(255, 255, 255, 0.89); */
 	width: 100%;
+	z-index: 1;
 }
 
 .h-btn {
@@ -153,3 +156,26 @@ header a {
 	color: rgb(255, 237, 42);
 }
 
+
+/* scroll bar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #1B49C6, #00aaff); 
+    border-radius: 10px;
+    transition: background 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #A114DB, #C51EE4);
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F1F1;
+}
+.colon {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 25px;
+}
