@@ -5,6 +5,14 @@
 .mouse-cursor2 {
 	  position: fixed;
 }
+.mouse-cursor, .mouse-cursor2 {
+  position: absolute; /* تغییر به absolute */
+  pointer-events: none;
+}
+
+body {
+  overflow: hidden; /* جلوگیری از اسکرول صفحه */
+}
 @media screen and (min-width: 1024px) {
 	html:not(.elementor-html)  * {
 	cursor: none;
@@ -41,7 +49,7 @@
   background: url(../assets/pointer.png) no-repeat center center;
   background-size: cover;
 	z-index: 999999999999999999999;
-  transform: translate(-0%, -50%);
+  transform: translate(-10%, -50%);
   margin-top: 12px;
   pointer-events: none;
   transition: width .3s, height .3s, opacity .3s;
