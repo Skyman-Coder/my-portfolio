@@ -1,11 +1,31 @@
+:root {
+	--text-blue: rgb(59 130 246);
+	--text-lime: rgb(70, 147, 12);
+	--text-yellow: rgb(255, 255, 3);
+	--text-red: rgb(249, 31, 31);
+	--text-purple: purple;
+	--text-indigo: rgb(255, 237, 42);
+
+	--python: #3776AB;      /* Python Blue */
+	--cpp: #00599C;         /* C++ Blue */
+	--csharp: #962396;      /* C# Green */
+	--javascript: #F7DF1E;  /* JS Yellow */
+	--typescript: #3178C6;  /* TS Blue */
+	--react: #61DAFB;       /* React Cyan */
+	--php: #777BB4;         /* PHP Purple */
+	--html: #E34F26;        /* HTML5 Orange */
+	--css: #1572B6;         /* CSS3 Blue */
+	--git: #F05032;         /* Git Orange-Red */
+	--sql: #00618A;         /* SQL (MySQL Blue) */
+
+}
 @font-face {
 	font-family: bkoodak;
 	src: url(../fonts/BKoodakBold.ttf);
 }
 @font-face {
 	font-family: MartianMono;
-	src: url(../fonts/static/MartianMono-ExtraBold.ttf);
-	
+	src: url(../fonts/static/MartianMono-ExtraBold.ttf);	
 }
 
 * {
@@ -20,8 +40,9 @@
 	color: rgba(54, 54, 54, 0.849);
 }
 .container h2 {
-	border-top: 1px solid black;
+	border-top: 1px solid rgb(0, 0, 0);
 	padding: 20px;
+	color: var(--skill-colors);
 }
 .container {
 	z-index: 0;
@@ -42,6 +63,38 @@
 	max-height: 50vh;
 	overflow-y: auto;
 }
+
+.skills {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+}
+.skill {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background: white;
+}
+
+.dots {
+	display: flex;
+	gap: 5px;
+	transform: rotateY(180deg);
+}
+.dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #b6b6b6;
+}
+.dot.filled {
+	background: rgb(120, 13, 120);
+}
+
 header {
 	position: fixed;
 	font-size: 30px;
@@ -55,7 +108,7 @@ header {
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 	user-select: none;
 	width: 100%;
 	min-width: 300px;
@@ -72,8 +125,7 @@ header {
 
 header a {
     color: white;
-    margin: -8px 0px;
-	
+    margin: -8px 0px;	
 }
 
 .shiny-button {
@@ -87,25 +139,13 @@ header a {
     border-radius: 30px;
     font-size: 20px;
     font-weight: bold;
-    /* border: 1px solid black; */
     user-select: none;
     text-decoration: none;
     width: fit-content;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
-.github {
-	background-image: linear-gradient(90deg, #5939ce 0, #dd217fd7);
-}
-.telegram {
-	background-image: linear-gradient(90deg, #279bfa 0, #251ac4);
-}
-.whatsapp {
-	background-image: linear-gradient(90deg, #11a732 0, #0de660cc);
-}
-.rubika {
-	background-image: linear-gradient(90deg, #752cf3 0 30%,  rgb(36, 219, 36) 70%, #eb401ad5 100%);
-}
+
 .shiny-button::before {
     content: "";
     position: absolute;
@@ -120,56 +160,29 @@ header a {
 }
 
 @keyframes shine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
+    0% {left: -100%;}
+    100% {left: 100%;}
 }
 
-.shiny-button:hover {
-    transform: scale(1.05);
-}
-
-#github-icon, #telegram-icon, #whatsapp-icon, #rubika-icon {
+.icon {
     margin-right: 10px;
     vertical-align: middle;
 }
 
-.text-blue {
-	color: rgb(59 130 246);
-}
-.text-lime {
-	color: rgb(70, 147, 12);
-}
-.text-yellow {
-	color: rgb(255, 255, 3);
-}
-.text-red {
-	color: rgb(249, 31, 31)
-}
-.text-purple {
-	color: purple;
-}
-.text-indigo {
-	color: rgb(255, 237, 42);
-}
-
-
-/* scroll bar styles */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #1B49C6, #00aaff); 
-    border-radius: 10px;
+    /* background: linear-gradient(to bottom, #1B49C6, #00aaff); 
+    border-radius: 5px; */
+	background-color: #868686;
     transition: background 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #A114DB, #C51EE4);
+    /* background: linear-gradient(to bottom, #A114DB, #C51EE4); */
+	background-color: #868686;
 }
 
 ::-webkit-scrollbar-track {
@@ -179,3 +192,31 @@ header a {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 25px;
 }
+
+/* short styles */
+.shiny-button:hover {transform: scale(1.05);}
+
+.github {background-image: linear-gradient(90deg, #5939ce 0, #dd217fd7);}
+.telegram {background-image: linear-gradient(90deg, #279bfa 0, #251ac4);}
+.whatsapp {background-image: linear-gradient(90deg, #11a732 0, #0de660cc);}
+.rubika {background-image: linear-gradient(90deg, #752cf3 0 30%,  rgb(36, 219, 36) 70%, #eb401ad5 100%);}
+
+.text-blue {color: var(--text-blue)}
+.text-lime {color: var(--text-lime)}
+.text-yellow {color: var(--text-yellow)}
+.text-red {color: var(--text-red)}
+.text-purple {color: var(--text-purple)}
+.text-indigo {color: var(--text-indigo)}
+
+.skill:nth-child(1) span:first-child {color: var(--python)}
+.skill:nth-child(2) span:first-child {color: var(--cpp)}
+.skill:nth-child(3) span:first-child {color: var(--csharp)}
+.skill:nth-child(4) span:first-child {color: var(--javascript)}
+.skill:nth-child(5) span:first-child {color: var(--typescript)}
+.skill:nth-child(6) span:first-child {color: var(--react)}
+.skill:nth-child(7) span:first-child {color: var(--php)}
+.skill:nth-child(8) span:first-child {color: var(--git)}
+.skill:nth-child(9) span:first-child {color: var(--sql)}
+.skill:nth-child(10) span:first-child {color: var(--html)}
+.skill:nth-child(11) span:first-child {color: var(--css)}
+
